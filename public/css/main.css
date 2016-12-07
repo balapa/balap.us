@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Lato:300,400");
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-size: 16px; }
+
+img,
+video {
+  display: block; }
+
+a {
+  text-decoration: none; }
+
+header {
+  padding: 50px;
+  box-sizing: border-box;
+  text-align: center; }
+  header h1 {
+    margin-bottom: 5px;
+    font-family: 'Abril Fatface';
+    color: #454A70;
+    letter-spacing: 2px; }
+  header p {
+    font-size: 1.1rem;
+    font-family: 'Lato';
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #6b7c93; }
+
+.videos-list {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 0; }
+  .videos-list .list-item {
+    display: inline-block;
+    font-size: 0;
+    margin: 20px; }
+    .videos-list .list-item video {
+      display: block;
+      font-size: 0;
+      width: 500px; }
+
+.video-wrapper {
+  border: 1px solid #eee;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(50, 50, 93, 0.075);
+  border-radius: 3px; }
+  .video-wrapper:before {
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    box-shadow: 0 30px 60px rgba(50, 50, 93, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s all ease;
+    border-radius: 3px; }
+  .video-wrapper .overlay {
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    position: absolute;
+    background: linear-gradient(to top, #1A1648, rgba(69, 74, 112, 0.5));
+    z-index: 10;
+    border-radius: 3px;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s opacity ease; }
+  .video-wrapper .video-el {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+    z-index: 9; }
+  .video-wrapper .video-footer {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    font-size: 1rem;
+    color: #fff;
+    padding: 25px 20px;
+    box-sizing: border-box;
+    text-align: left;
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 2px;
+    z-index: 11;
+    opacity: 0;
+    transition: .3s all ease;
+    transform: translateY(5px); }
+  .video-wrapper:hover:before,
+  .video-wrapper:hover .overlay {
+    opacity: 1; }
+  .video-wrapper:hover .video-footer {
+    opacity: 1;
+    transform: translateY(0);
+    transition: .3s all ease .1s; }
