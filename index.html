@@ -1,83 +1,309 @@
 <html>
 	<head>
+		<title>Bhakti Al Akbar</title>
+
+		<link rel="icon" type="image/png" href="./public/img/favicon.png">
+		<!-- <link rel="stylesheet" href="./public/css/flexboxgrid.css"> -->
+		<link rel="stylesheet" href="./public/css/main.css">
+
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta charset="utf-8">
-		<link rel="icon" type="image/png" href="./private/img/favicon.png">
-		<link rel="stylesheet" href="./public/css/main.css">
-		<meta name="description" content="balapa a.k.a Bhakti Al Akbar is an interactive developer and interface designer"/>
-		<meta name="keywords" content="Front-End Developer, Interactive Developer, UI Designer, HTML, CSS, JavaScript, Canvas, SVG">
+		<meta name="description" content="balapa a.k.a Bhakti Al Akbar is an UI Engineer, Developer, Designer"/>
+		<meta name="keywords" content="UI Engineer, UI Developer, UI Designer">
 		<meta name="author" content="Bhakti Al Akbar"/>
-		<title>Bhakti Al Akbar</title>		
 	</head>
 
 	<body>
-		<header>
-			<h1>Hi, I am Bhakti Al Akbar</h1>
-			<p>Interactive developer and interface designer.</p>
-		</header>
 
-		<ul class="videos-list">
-			<li class="list-item">
-				<div class="video-wrapper">
-					<div class="overlay"></div>
-					<div class="video-el">
-						<video src="private/vids/mario.mp4" autoplay loop></video>
-					</div>
-					<div class="video-footer">Drag and drop game.</div>
+		<svg class="hidden" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+			<defs>
+			  <g id="play-svg" fill="none" fill-rule="evenodd">
+			    <path fill="#fff" d="M20 40C9 40 0 31 0 20S9 0 20 0s20 9 20 20-9 20-20 20zm-5.6-29.6v20l16-10-16-10z"/>
+			  </g>
+			</path>
+		</svg>
+
+		<!-- base wrapper -->
+		<section class="base-wrapper">
+
+			<!-- header -->
+			<header>
+				<figure class="img-wrapper">
+					<img src="./public/img/balapa.jpg" alt="Bhakti's photograph">
+				</figure>
+				<div class="header-content">
+					<h1>Bhakti Al Akbar</h1>
+					<detail>UI Engineer/Designer</detail>
+
+					<!-- resources: https://simpleicons.org/ -->
+					<ul class="social-list hide-me-on-mobile">
+						<li>
+						  <a href="https://github.com/balapa" class="icon github">
+						    <<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.09-.202-.36-1.015.07-2.117 0 0 .67-.215 2.2.82.64-.178 1.32-.266 2-.27.68.004 1.36.092 2 .27 1.52-1.035 2.19-.82 2.19-.82.43 1.102.16 1.915.08 2.117.51.56.82 1.274.82 2.147 0 3.073-1.87 3.75-3.65 3.947.28.24.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.14.46.55.38C13.71 14.53 16 11.53 16 8c0-4.418-3.582-8-8-8"/></svg>
+						  </a>
+						</li>
+						<li>
+							<a href="https://codepen.io/balapa" class="icon codepen">
+								<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M15.988 5.443c-.004-.02-.007-.04-.012-.058l-.01-.033c-.006-.017-.012-.034-.02-.05-.003-.012-.01-.023-.014-.034l-.023-.045-.02-.032-.03-.04-.03-.03-.04-.03-.03-.02-.04-.03-.03-.02-.01-.01L8.38.12c-.23-.154-.53-.154-.76 0L.302 4.99.292 5l-.03.023-.04.032-.025.027-.034.037-.024.03-.03.04c-.01.01-.02.02-.02.03l-.03.04-.01.04c-.01.01-.01.03-.02.05l-.01.03c-.01.02-.01.04-.01.06v.03C0 5.5 0 5.53 0 5.56v4.875c0 .03.002.06.006.09l.007.03c.003.02.006.04.013.058l.01.033c.006.018.01.035.018.05l.015.033c0 .01.01.03.02.04l.02.03c.01.01.02.03.03.04l.02.03.03.03c.01.01.01.02.02.02l.04.03.03.02.01.01 7.31 4.88c.11.08.25.11.38.11s.26-.04.38-.12L15.68 11l.01-.01.03-.022.04-.03.03-.026.035-.037.024-.03.03-.04.02-.032.02-.046.01-.036.02-.05.01-.03.02-.05v-5c0-.03 0-.06-.01-.09l-.01-.03zM8 9.626L5.568 8 8 6.374 10.432 8 8 9.626zM7.312 5.18l-2.98 1.993-2.406-1.61 5.386-3.59V5.18zM3.095 8l-1.72 1.15v-2.3L3.095 8zm1.237.828l2.98 1.993v3.21l-5.386-3.59 2.406-1.61zm4.355 1.993l2.98-1.99 2.407 1.61-5.387 3.59v-3.2zM12.905 8l1.72-1.15v2.3L12.905 8zm-1.237-.827L8.688 5.18V1.97l5.386 3.59-2.406 1.61z" fill-rule="nonzero"/></svg>
+							</a>
+						</li>
+						<li>
+						  <a href="https://dribbble.com/balapa" class="icon dribbble">
+						    <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 16c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm6.747-6.905c-.234-.074-2.115-.635-4.257-.292.894 2.456 1.258 4.456 1.328 4.872 1.533-1.037 2.624-2.68 2.93-4.58zM10.67 14.3c-.102-.6-.5-2.688-1.46-5.18l-.044.014C5.312 10.477 3.93 13.15 3.806 13.4c1.158.905 2.614 1.444 4.194 1.444.947 0 1.85-.194 2.67-.543zm-7.747-1.72c.155-.266 2.03-3.37 5.555-4.51.09-.03.18-.056.27-.08-.173-.39-.36-.778-.555-1.16-3.413 1.02-6.723.977-7.023.97l-.003.208c0 1.755.665 3.358 1.756 4.57zM1.31 6.61c.307.005 3.122.017 6.318-.832-1.132-2.012-2.353-3.705-2.533-3.952-1.912.902-3.34 2.664-3.784 4.785zM6.4 1.368c.188.253 1.43 1.943 2.548 4 2.43-.91 3.46-2.293 3.582-2.468C11.323 1.827 9.736 1.176 8 1.176c-.55 0-1.087.066-1.6.19zm6.89 2.322c-.145.194-1.29 1.662-3.816 2.694.16.325.31.656.453.99.05.117.1.235.147.352 2.274-.286 4.533.172 4.758.22-.015-1.613-.59-3.094-1.543-4.257z"/></svg>
+						  </a>
+						</li>
+						<li>
+						  <a href="https://linkedin.com/in/balapa" class="icon linkedin">
+						    <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M13.632 13.635h-2.37V9.922c0-.886-.018-2.025-1.234-2.025-1.235 0-1.424.964-1.424 1.96v3.778h-2.37V6H8.51v1.04h.03c.318-.6 1.092-1.233 2.247-1.233 2.4 0 2.845 1.58 2.845 3.637v4.188zM3.558 4.955c-.762 0-1.376-.617-1.376-1.377 0-.758.614-1.375 1.376-1.375.76 0 1.376.617 1.376 1.375 0 .76-.617 1.377-1.376 1.377zm1.188 8.68H2.37V6h2.376v7.635zM14.816 0H1.18C.528 0 0 .516 0 1.153v13.694C0 15.484.528 16 1.18 16h13.635c.652 0 1.185-.516 1.185-1.153V1.153C16 .516 15.467 0 14.815 0z" fill-rule="nonzero"/></svg>
+						  </a>
+						</li>
+						<li>
+						  <a href="mailto:balapa95@gmail.com" class="icon mail" title="email">
+						  	<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M16 3v10c0 .567-.433 1-1 1h-1V4.925L8 9.233 2 4.925V14H1c-.567 0-1-.433-1-1V3c0-.283.108-.533.287-.712C.467 2.107.718 2 1 2h.333L8 6.833 14.667 2H15c.283 0 .533.108.713.288.179.179.287.429.287.712z" fill-rule="evenodd"/></svg>
+						  </a>
+						</li>
+					</ul>
 				</div>
-			</li>
+			</header>
 
-			<li class="list-item">
-				<div class="video-wrapper">
-					<div class="overlay"></div>
-					<div class="video-el">
-						<video src="private/vids/traveloka.mp4" autoplay loop></video>
-					</div>
-					<div class="video-footer">Logo animation</div>
-				</div>
-			</li>
+			<ul class="social-list social-list-2 show-me-on-mobile">
+				<li>
+				  <a href="https://github.com/balapa" class="icon github">
+				    <<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.09-.202-.36-1.015.07-2.117 0 0 .67-.215 2.2.82.64-.178 1.32-.266 2-.27.68.004 1.36.092 2 .27 1.52-1.035 2.19-.82 2.19-.82.43 1.102.16 1.915.08 2.117.51.56.82 1.274.82 2.147 0 3.073-1.87 3.75-3.65 3.947.28.24.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.14.46.55.38C13.71 14.53 16 11.53 16 8c0-4.418-3.582-8-8-8"/></svg>
+				  </a>
+				</li>
+				<li>
+					<a href="https://codepen.io/balapa" class="icon codepen">
+						<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M15.988 5.443c-.004-.02-.007-.04-.012-.058l-.01-.033c-.006-.017-.012-.034-.02-.05-.003-.012-.01-.023-.014-.034l-.023-.045-.02-.032-.03-.04-.03-.03-.04-.03-.03-.02-.04-.03-.03-.02-.01-.01L8.38.12c-.23-.154-.53-.154-.76 0L.302 4.99.292 5l-.03.023-.04.032-.025.027-.034.037-.024.03-.03.04c-.01.01-.02.02-.02.03l-.03.04-.01.04c-.01.01-.01.03-.02.05l-.01.03c-.01.02-.01.04-.01.06v.03C0 5.5 0 5.53 0 5.56v4.875c0 .03.002.06.006.09l.007.03c.003.02.006.04.013.058l.01.033c.006.018.01.035.018.05l.015.033c0 .01.01.03.02.04l.02.03c.01.01.02.03.03.04l.02.03.03.03c.01.01.01.02.02.02l.04.03.03.02.01.01 7.31 4.88c.11.08.25.11.38.11s.26-.04.38-.12L15.68 11l.01-.01.03-.022.04-.03.03-.026.035-.037.024-.03.03-.04.02-.032.02-.046.01-.036.02-.05.01-.03.02-.05v-5c0-.03 0-.06-.01-.09l-.01-.03zM8 9.626L5.568 8 8 6.374 10.432 8 8 9.626zM7.312 5.18l-2.98 1.993-2.406-1.61 5.386-3.59V5.18zM3.095 8l-1.72 1.15v-2.3L3.095 8zm1.237.828l2.98 1.993v3.21l-5.386-3.59 2.406-1.61zm4.355 1.993l2.98-1.99 2.407 1.61-5.387 3.59v-3.2zM12.905 8l1.72-1.15v2.3L12.905 8zm-1.237-.827L8.688 5.18V1.97l5.386 3.59-2.406 1.61z" fill-rule="nonzero"/></svg>
+					</a>
+				</li>
+				<li>
+				  <a href="https://dribbble.com/balapa" class="icon dribbble">
+				    <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 16c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm6.747-6.905c-.234-.074-2.115-.635-4.257-.292.894 2.456 1.258 4.456 1.328 4.872 1.533-1.037 2.624-2.68 2.93-4.58zM10.67 14.3c-.102-.6-.5-2.688-1.46-5.18l-.044.014C5.312 10.477 3.93 13.15 3.806 13.4c1.158.905 2.614 1.444 4.194 1.444.947 0 1.85-.194 2.67-.543zm-7.747-1.72c.155-.266 2.03-3.37 5.555-4.51.09-.03.18-.056.27-.08-.173-.39-.36-.778-.555-1.16-3.413 1.02-6.723.977-7.023.97l-.003.208c0 1.755.665 3.358 1.756 4.57zM1.31 6.61c.307.005 3.122.017 6.318-.832-1.132-2.012-2.353-3.705-2.533-3.952-1.912.902-3.34 2.664-3.784 4.785zM6.4 1.368c.188.253 1.43 1.943 2.548 4 2.43-.91 3.46-2.293 3.582-2.468C11.323 1.827 9.736 1.176 8 1.176c-.55 0-1.087.066-1.6.19zm6.89 2.322c-.145.194-1.29 1.662-3.816 2.694.16.325.31.656.453.99.05.117.1.235.147.352 2.274-.286 4.533.172 4.758.22-.015-1.613-.59-3.094-1.543-4.257z"/></svg>
+				  </a>
+				</li>
+				<li>
+				  <a href="https://linkedin.com/in/balapa" class="icon linkedin">
+				    <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M13.632 13.635h-2.37V9.922c0-.886-.018-2.025-1.234-2.025-1.235 0-1.424.964-1.424 1.96v3.778h-2.37V6H8.51v1.04h.03c.318-.6 1.092-1.233 2.247-1.233 2.4 0 2.845 1.58 2.845 3.637v4.188zM3.558 4.955c-.762 0-1.376-.617-1.376-1.377 0-.758.614-1.375 1.376-1.375.76 0 1.376.617 1.376 1.375 0 .76-.617 1.377-1.376 1.377zm1.188 8.68H2.37V6h2.376v7.635zM14.816 0H1.18C.528 0 0 .516 0 1.153v13.694C0 15.484.528 16 1.18 16h13.635c.652 0 1.185-.516 1.185-1.153V1.153C16 .516 15.467 0 14.815 0z" fill-rule="nonzero"/></svg>
+				  </a>
+				</li>
+				<li>
+				  <a href="mailto:balapa95@gmail.com" class="icon mail" title="email">
+				  	<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M16 3v10c0 .567-.433 1-1 1h-1V4.925L8 9.233 2 4.925V14H1c-.567 0-1-.433-1-1V3c0-.283.108-.533.287-.712C.467 2.107.718 2 1 2h.333L8 6.833 14.667 2H15c.283 0 .533.108.713.288.179.179.287.429.287.712z" fill-rule="evenodd"/></svg>
+				  </a>
+				</li>
+			</ul>
 
-			<li class="list-item">
-				<div class="video-wrapper">
-					<div class="overlay"></div>
-					<div class="video-el">
-						<video src="private/vids/apple-tv.mp4" autoplay loop></video>
-					</div>
-					<div class="video-footer">Apple TV Interaction</div>
-				</div>
-			</li>
+			<!-- content wrapper -->
+			<div class="content-wrapper">
 
-			<li class="list-item">
-				<div class="video-wrapper">
-					<div class="overlay"></div>
-					<div class="video-el">
-						<video src="private/vids/elastic-fire.mp4" autoplay loop></video>
-					</div>
-					<div class="video-footer">Elastic Fire</div>
-				</div>
-			</li>
+				<!-- about -->
+				<section id="about">
 
-			<li class="list-item">
-				<div class="video-wrapper">
-					<div class="overlay"></div>
-					<div class="video-el">
-						<video src="private/vids/emojis.mp4" autoplay loop></video>
-					</div>
-					<div class="video-footer">Emojis Animation</div>
-				</div>
-			</li>
+					<h3>about</h3>
+					<p>I’m a Front-End Developer with extensive experience in HTML/CSS, SVG, vanilla JavaScript, and React.js. I also have a great sense of visual design and UI animation.</p>
+					<p>I live in Indonesia (GMT+7) and work as a remote developer for a New York-based agency. And oh, here's my <a class="link" href="Bhakti-Al-Akbar-Resume.pdf">resume</a>.</p>
+					
+				</section>
+				<!-- end about -->
 
-			<li class="list-item">
-				<div class="video-wrapper">
-					<div class="overlay"></div>
-					<div class="video-el">
-						<video src="private/vids/password.mp4" autoplay loop></video>
-					</div>
-					<div class="video-footer">Reveal Password Interaction</div>
-				</div>
-			</li>
 
-		</ul>
 
+				<!-- works -->
+				<section id="works">
+				
+					<h3>works</h3>
+					<p>I love to combine minimal UI and playful graphics to make an interactive experience. Check out some quick videos of my recent works below.</p>
+					
+					<!-- work list -->
+					<ul class="block-list videos-list row">
+						<li class="list-item">
+							<div class="block-wrapper">
+								<div class="block video-block">
+									<div class="play-button">
+										<svg>
+											<use xlink:href="#play-svg"/>
+										</svg>
+									</div>
+									<video src="./public/vid/svg-morphing-line.mp4" poster="./public/vid/svg-morphing-line-poster.png"></video>
+								</div>
+								<div class="block-caption">
+									SVG Morphing Line &bull; 
+									<a target="_blank" class="link" href="https://www.uiplease.com/demo/svg-line-morphing-transition/">Demo</a>
+								</div>
+							</div>
+						</li>
+
+						<li class="list-item">
+							<div class="block-wrapper">
+								<div class="block video-block">
+									<div class="play-button">
+										<svg>
+											<use xlink:href="#play-svg"/>
+										</svg>
+									</div>
+									<video class="w-poster" src="./public/vid/fb-live.mp4" poster="./public/vid/fb-live-poster.png"></video>
+								</div>
+								<div class="block-caption">
+									Facebook Live Interaction &bull; 
+									<a target="_blank" class="link" href="https://www.uiplease.com/demo/exploring-facebook-live-ui/">Demo</a>
+								</div>
+							</div>
+						</li>
+
+						<li class="list-item">
+							<div class="block-wrapper">
+								<div class="block video-block">
+									<div class="play-button">
+										<svg>
+											<use xlink:href="#play-svg"/>
+										</svg>
+									</div>
+									<video src="./public/vid/mario.mp4" poster="./public/vid/mario-poster.png"></video>
+								</div>
+								<div class="block-caption">
+									Mario Drag and Drop Game &bull; 
+									<a target="_blank" class="link" href="https://codepen.io/balapa/full/zorzJE">Demo</a>
+								</div>
+							</div>
+						</li>
+
+						<li class="list-item">
+							<div class="block-wrapper">
+								<div class="block video-block">
+									<div class="play-button">
+										<svg>
+											<use xlink:href="#play-svg"/>
+										</svg>
+									</div>
+									<video src="./public/vid/elastic-fire.mp4" poster="./public/vid/elastic-fire-poster.png"></video>
+								</div>
+								<div class="block-caption">
+									Elastic Fire &bull; 
+									<a target="_blank" class="link" href="https://codepen.io/balapa/full/GjJvwg">Demo</a>
+								</div>
+							</div>
+						</li>
+
+						<li class="list-item">
+							<div class="block-wrapper">
+								<div class="block video-block w-border">
+									<div class="play-button">
+										<svg>
+											<use xlink:href="#play-svg"/>
+										</svg>
+									</div>
+									<video src="./public/vid/animated-emojis.mp4" poster="./public/vid/animated-emojis-poster.png"></video>
+								</div>
+								<div class="block-caption">
+									Animated Emojis &bull; 
+									<a target="_blank" class="link" href="https://codepen.io/balapa/full/ZQpjEB">Demo</a>
+								</div>
+							</div>
+						</li>
+
+						<li class="list-item">
+							<div class="block-wrapper">
+								<div class="block video-block">
+									<div class="play-button">
+										<svg>
+											<use xlink:href="#play-svg"/>
+										</svg>
+									</div>
+									<video class="w-poster" src="./public/vid/tvlk.mp4" poster="./public/vid/tvlk-poster.png"></video>
+								</div>
+								<div class="block-caption">
+									Traveloka Logo Animation &bull; 
+									<a target="_blank" class="link" href="https://codepen.io/balapa/full/xwPdrx">Demo</a>
+								</div>
+							</div>
+						</li>
+
+					</ul>
+
+					<p>You can see more of my animation works on my <a target="_blank" href="https://codepen.io/balapa" class="link">CodePen</a> or <a target="_blank" href="https://dribbble.com/balapa" class="link">Dribbble</a>.</p>
+				</section>
+				<!-- end works -->
+
+
+
+				<!-- projects -->
+				<section id="projects">
+				
+					<h3>projects</h3>
+					<p>My primary skill is to develop UI and animations with HTML/CSS, SVG, Canvas, and JavaScript. But I've also worked in backend environment before, such as PHP and Node.js.</p>
+
+					<!-- project list -->
+					<ul class="block-list">
+
+						<li class="list-item">
+							<div class="block-wrapper">
+								<a target="_blank" href="http://balap.us/icreon" class="block">
+									<img src="./public/img/projects/icreon.png" alt="Icreon project">
+								</a>
+								<div class="block-caption">
+									<!-- Website &rarr;  -->
+									<a target="_blank" href="http://balap.us/icreon" class="link">Icreon.com</a> is a company profile website with interactive experiences.
+								</div>
+							</div>
+						</li>
+
+						<li class="list-item">
+							<div class="block-wrapper">
+								<a target="_blank" href="http://uiplease.com" class="block w-border">
+									<img src="./public/img/projects/uiplease.png" alt="Icreon project">
+								</a>
+								<div class="block-caption">
+									<!-- Website &rarr;  -->
+									<a target="_blank" href="https://uiplease.com" class="link">uiplease.com</a> is a side project where I do animation experiments and explain how the code works.
+								</div>
+							</div>
+						</li>
+
+						<li class="list-item">
+							<div class="block-wrapper">
+								<a target="_blank" href="http://terminal.netlify.com/" class="block w-border">
+									<img src="./public/img/projects/terminal.png" alt="Terminal.io project">
+								</a>
+								<div class="block-caption">
+									<!-- Website &rarr;  -->
+									<a target="_blank" href="http://terminal.netlify.com/" class="link">Terminal.io</a> is a landing page with parallax effect and animated SVG characters.
+								</div>
+							</div>
+						</li>
+
+						<li class="list-item">
+							<div class="block-wrapper">
+								<div class="block w-border">
+									<img src="./public/img/projects/jirapp.png" alt="Jirapp project">
+								</div>
+								<div class="block-caption">
+									<!-- Website &rarr;  -->
+									Jirapp is a desktop app built with Electron framework and node.js.
+									<a target="_blank" href="https://youtu.be/kOJoJlX8NsA" class="link">Watch the demo.</a>
+								</div>
+							</div>
+						</li>
+
+					</ul>
+
+				</section>
+				<!-- end projects -->
+
+
+
+				<!-- copyright -->
+				<section id="copyright">
+					<p class="small">&copy; 2017 &bull; Bhakti Al Akbar</p>
+					<!-- <p class="small">That's all, thanks for reading!</p> -->
+				</section>
+				<!-- end copyright -->
+
+			</div>
+			
+		</section>
+
+	<script src="./public/js/get.js"></script>
+	<script src="./public/js/main.js"></script>
 	</body>
 </html>
